@@ -36,4 +36,4 @@ df.molten <- melt(df, id.vars=c("subject_id", "activity"))
 df.cast <- cast(df.molten, subject_id+activity~..., fun.aggregate=mean)
 
 write.csv(df, "complete_features.csv")
-write.csv(df.molten, "averages.csv")
+write.csv(df.cast, "averages.csv")
